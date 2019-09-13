@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VirtualPetsAmokDotNet
 {
-    class VirtualPet
+    public class VirtualPet
     {
         public int Hunger { get; set; }
         public int PetSocial { get; set; }
@@ -20,14 +20,28 @@ namespace VirtualPetsAmokDotNet
             Health = 10;
 
         }
+        public void MainMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("MAIN MENU");
+            Console.WriteLine("If you want to see your pets info enter: PetsInfo");
+            Console.WriteLine("If you want to see your pets status enter: PS ");
+            Console.WriteLine("If you want to feed your pet enter: Feed");
+            Console.WriteLine("If you want to play with your pet enter: Play");
+            Console.WriteLine("If you want to take you pet to the doctor enter: Doctor");
+
+        }
         public void PetName()
         {
+            Console.WriteLine("What is its Name: ");
             Name = Console.ReadLine();
         }
         public void PetSpecies()
         {
+            Console.WriteLine("What species is it: ");
             Species = Console.ReadLine();
         }
+
         public void PetInfo()
         {
             Console.WriteLine("Your pets name is :" + " " + Name);
@@ -41,8 +55,8 @@ namespace VirtualPetsAmokDotNet
         public void Feed()
         {
             Console.WriteLine("You have fed your pet!");
-            Hunger++;
-            Hunger++;
+            Hunger -=2;
+
             PetSocial--;
             if (Hunger <= 0)
             {
