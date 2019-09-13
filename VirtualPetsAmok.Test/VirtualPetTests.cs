@@ -16,5 +16,16 @@ namespace VirtualPetsAmokDotNet.Test
             Assert.Equal(8, pet.Hunger);
 
         }
+
+        [Fact]
+        public void Health_is_Equal_To_3()
+        {
+            VirtualPet Health = new VirtualPet();
+            Health.Health = 3;
+
+            Health.Play();
+
+            Assert.Equal(3, Health.Health);
+        }
     }
 }
