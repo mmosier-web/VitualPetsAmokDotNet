@@ -87,7 +87,7 @@ namespace VirtualPetsAmokDotNet
             }
             else
             {
-                Console.WriteLine("You played with your pets");
+                Console.WriteLine("You played with your pet");
                 PetSocial++;
                 Fullness--;
                 Fullness--;

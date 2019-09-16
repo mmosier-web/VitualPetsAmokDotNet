@@ -53,67 +53,68 @@ namespace VirtualPetsAmokDotNet
                     pet.PetSpecies();
                     shelter.AddPetToShelter(pet);
                 }
-                    
-                if (playerSelection == "petsinfo")
+
+                else if (playerSelection == "petsinfo")
                 {
                     //pet.PetInfo();
                     shelter.ShowAllInfo();
                     Console.WriteLine("Press Enter");
                     Console.ReadKey();
                 }
-                if (playerSelection == "ps")
+                else if (playerSelection == "ps")
                 {
                     pet.PetStatus();
                     Console.WriteLine("Press Enter");
                     Console.ReadKey();
                 }
-                if (playerSelection == "feed")
+                else if (playerSelection == "feed")
                 {
                     pet.Feed();
                     Console.WriteLine("Press Enter");
                     Console.ReadKey();
                 }
-                if (playerSelection == "play")
+                else if (playerSelection == "play")
                 {
                     pet.Play();
                     Console.WriteLine("Press Enter");
                     Console.ReadKey();
                 }
-                if (playerSelection == "doctor")
+                else if (playerSelection == "doctor")
                 {
                     pet.Doctor();
                     Console.WriteLine("Press Enter");
                     Console.ReadKey();
                 }
-                if (playerSelection == "allstatus")
+                else if (playerSelection == "allstatus")
                 {
                     shelter.ShowAllStatus();
                     Console.WriteLine("Press Enter");
                     Console.ReadKey();
                 }
-                if (playerSelection == "feedall")
+                else if (playerSelection == "feedall")
                 {
                     shelter.FeedAllPets();
                     Console.WriteLine("Press Enter");
                     Console.ReadKey();
                 }
-                if (playerSelection== "playall")
+                else if (playerSelection== "playall")
                 {
                     shelter.PlayAll();
                     Console.WriteLine("Press Enter");
                     Console.ReadKey();
                 }
-                if (playerSelection == "doctorall")
+                else if (playerSelection == "doctorall")
                 {
                     shelter.TakeAllToDoctor();
                     Console.WriteLine("Press Enter");
                     Console.ReadKey();
                 }
-                if (playerSelection == "exit") 
+                else if (playerSelection == "exit") 
                 {
                     Environment.Exit(0);
 
                 }
+                
             }
         }
     }
