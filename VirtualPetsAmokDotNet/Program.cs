@@ -109,6 +109,11 @@ namespace VirtualPetsAmokDotNet
                     Console.WriteLine("Press Enter");
                     Console.ReadKey();
                 }
+                if (playerSelection == "exit") 
+                {
+                    Environment.Exit(0);
+
+                }
             }
         }
     }
