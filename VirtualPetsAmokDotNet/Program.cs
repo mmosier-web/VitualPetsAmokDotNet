@@ -85,6 +85,30 @@ namespace VirtualPetsAmokDotNet
                     Console.WriteLine("Press Enter");
                     Console.ReadKey();
                 }
+                if (playerSelection == "allstatus")
+                {
+                    shelter.ShowAllStatus();
+                    Console.WriteLine("Press Enter");
+                    Console.ReadKey();
+                }
+                if (playerSelection == "feedall")
+                {
+                    shelter.FeedAllPets();
+                    Console.WriteLine("Press Enter");
+                    Console.ReadKey();
+                }
+                if (playerSelection== "playall")
+                {
+                    shelter.PlayAll();
+                    Console.WriteLine("Press Enter");
+                    Console.ReadKey();
+                }
+                if (playerSelection == "doctorall")
+                {
+                    shelter.TakeAllToDoctor();
+                    Console.WriteLine("Press Enter");
+                    Console.ReadKey();
+                }
             }
         }
     }

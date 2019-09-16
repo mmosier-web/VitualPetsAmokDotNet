@@ -23,6 +23,33 @@ namespace VirtualPetsAmokDotNet
                 pet.PetInfo();
             }
         }
-
+        public void ShowAllStatus()
+        {
+            foreach(VirtualPet pet in shelter)
+            {
+                pet.PetStatus();
+            }
+        }
+        public void FeedAllPets()
+        {
+            foreach (VirtualPet pet in shelter)
+            {
+                pet.Feed();
+            }
+        }
+        public void PlayAll()
+        {
+            foreach (VirtualPet pet in shelter)
+            {
+                pet.Play();
+            }
+        }
+        public void TakeAllToDoctor()
+        {
+            foreach (VirtualPet pet in shelter)
+            {
+                pet.Doctor();
+            }
+        }
     }
 }

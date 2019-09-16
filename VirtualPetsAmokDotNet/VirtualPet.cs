@@ -31,6 +31,10 @@ namespace VirtualPetsAmokDotNet
             Console.WriteLine("If you want to feed your pet enter: Feed");
             Console.WriteLine("If you want to play with your pet enter: Play");
             Console.WriteLine("If you want to take you pet to the doctor enter: Doctor");
+            Console.WriteLine("If you want to see every pet's status enter: AllStatus");
+            Console.WriteLine("If you want to feed all pet's enter: FeedAll");
+            Console.WriteLine("If you want to play with all pet's enter: PlayAll");
+            Console.WriteLine("If you want to take all pet's to the doctor enter: DoctorAll");
             
 
         }
