@@ -56,6 +56,7 @@ namespace VirtualPetsAmokDotNet
         }
         public void PetStatus()
         {
+            Console.WriteLine(Name + " " + Species);
             Console.WriteLine("Hunger (Dont let the number reach 0 or less or you pet will lose health) social (If you pet gets to lonely it will lose health) Health (If health = 0 your pet will die so mke sure to go to the doctor)");
             Console.WriteLine("Pet Fullness = " + Fullness + " Social = " + PetSocial + " Health = " + Health);
         }
