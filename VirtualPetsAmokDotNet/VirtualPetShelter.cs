@@ -16,5 +16,13 @@ namespace VirtualPetsAmokDotNet
         {
             shelter.Add(pet);
         }
+        public void ShowAllInfo()
+        {
+            foreach(VirtualPet pet in shelter)
+            {
+                pet.PetInfo();
+            }
+        }
+
     }
 }

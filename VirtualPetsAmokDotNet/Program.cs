@@ -56,7 +56,8 @@ namespace VirtualPetsAmokDotNet
                     
                 if (playerSelection == "petsinfo")
                 {
-                    pet.PetInfo();
+                    //pet.PetInfo();
+                    shelter.ShowAllInfo();
                     Console.WriteLine("Press Enter");
                     Console.ReadKey();
                 }
