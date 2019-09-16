@@ -6,7 +6,7 @@ namespace VirtualPetsAmokDotNet
 {
     public class VirtualPet
     {
-        public int Hunger { get; set; }
+        public int Fullness { get; set; }
         public int PetSocial { get; set; }
         public int Health { get; set; }
         public string Name { get; set; }
@@ -15,7 +15,7 @@ namespace VirtualPetsAmokDotNet
 
         public VirtualPet()
         {
-            Hunger = 10;
+            Fullness = 10;
             PetSocial = 10;
             Health = 10;
 
@@ -50,15 +50,15 @@ namespace VirtualPetsAmokDotNet
         public void PetStatus()
         {
             Console.WriteLine("Hunger (Dont let the number reach 0 or less or you pet will lose health) social (If you pet gets to lonely it will lose health) Health (If health = 0 your pet will die so mke sure to go to the doctor)");
-            Console.WriteLine("Pet hunger = " + Hunger + " Social = " + PetSocial + " Health = " + Health);
+            Console.WriteLine("Pet Fullness = " + Fullness + " Social = " + PetSocial + " Health = " + Health);
         }
         public void Feed()
         {
             Console.WriteLine("You have fed your pet!");
-            Hunger -=2;
+            Fullness +=2;
 
             PetSocial--;
-            if (Hunger <= 0)
+            if (Fullness <= 0)
             {
                 Console.WriteLine("Your pet is to low on food and is losing health!");
                 Health--;
@@ -69,7 +69,7 @@ namespace VirtualPetsAmokDotNet
             if (Health == 3)
             {
                 Console.WriteLine("You must go to doctor before playing with you pet because it's health is to low!");
-                if (Hunger <= 0)
+                if (Fullness <= 0)
                 {
                     Console.WriteLine("Your pet is to low on food and is losing health!");
                     Health--;
@@ -80,10 +80,10 @@ namespace VirtualPetsAmokDotNet
             {
                 Console.WriteLine("You played with your pets");
                 PetSocial++;
-                Hunger--;
-                Hunger--;
+                Fullness--;
+                Fullness--;
                 Random rnd = new Random();
-                int HealthDown = rnd.Next(1, 5);
+                int HealthDown = rnd.Next(1, 6);
                 switch (HealthDown)
                 {
                     case 1:
@@ -99,7 +99,7 @@ namespace VirtualPetsAmokDotNet
                     case 5:
                         break;
                 }
-                if (Hunger <= 0)
+                if (Fullness <= 0)
                 {
                     Console.WriteLine("Your pet is to low on food and is losing health!");
                     Health--;
@@ -112,9 +112,9 @@ namespace VirtualPetsAmokDotNet
             Console.WriteLine("You took your pet to the doctor!");
             Health++;
             Health++;
-            Hunger--;
+            Fullness--;
             PetSocial--;
-            if (Hunger <= 0)
+            if (Fullness <= 0)
             {
                 Console.WriteLine("Your pet is to low on food and is losing health!");
                 Health--;

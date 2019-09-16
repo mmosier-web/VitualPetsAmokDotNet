@@ -9,11 +9,11 @@ namespace VirtualPetsAmokDotNet.Test
         public void Feed_Decreases_Hunger_By_2()
         {
             VirtualPet pet = new VirtualPet();
-            pet.Hunger = 10;
+            pet.Fullness = 10;
 
             pet.Feed();
 
-            Assert.Equal(8, pet.Hunger);
+            Assert.Equal(12 , pet.Fullness);
 
         }
 
@@ -27,5 +27,18 @@ namespace VirtualPetsAmokDotNet.Test
 
             Assert.Equal(3, Health.Health);
         }
+
+        [Fact]
+        public void Health_Increases_By_2()
+        {
+            VirtualPet Health = new VirtualPet();
+            Health.Health = +2;
+
+            Assert.Equal(+ 2, Health.Health);
+
+        }
+
+
+
     }
 }
