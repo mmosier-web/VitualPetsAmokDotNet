@@ -6,16 +6,15 @@ namespace VirtualPetsAmokDotNet
 {
     class VirtualPetShelter
     {
+        List<VirtualPet> shelter = new List<VirtualPet>();
+
         public VirtualPetShelter()
         {
-            List<VirtualPetShelter> shelter = new List<VirtualPetShelter>();
 
-
-
-
-
-
-
+        }
+        public void AddPetToShelter(VirtualPet pet)
+        {
+            shelter.Add(pet);
         }
     }
 }

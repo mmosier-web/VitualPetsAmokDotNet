@@ -22,13 +22,16 @@ namespace VirtualPetsAmokDotNet
         }
         public void MainMenu()
         {
+            
             Console.Clear();
             Console.WriteLine("MAIN MENU");
+            Console.WriteLine("If you want to add another pet to the shelter: Add");
             Console.WriteLine("If you want to see your pets info enter: PetsInfo");
             Console.WriteLine("If you want to see your pets status enter: PS ");
             Console.WriteLine("If you want to feed your pet enter: Feed");
             Console.WriteLine("If you want to play with your pet enter: Play");
             Console.WriteLine("If you want to take you pet to the doctor enter: Doctor");
+            
 
         }
         public void PetName()

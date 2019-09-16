@@ -8,6 +8,7 @@ namespace VirtualPetsAmokDotNet
         static void Main(string[] args)
         {
             VirtualPet pet = new VirtualPet();
+            VirtualPetShelter shelter = new VirtualPetShelter();
             Console.WriteLine("Would you like to start the Game? (Y / N)");
             string Player = Console.ReadLine().ToLower();
 
@@ -26,8 +27,9 @@ namespace VirtualPetsAmokDotNet
             }
             Console.WriteLine("Welcome to Virtual Pets! In this game you can create any pet you can think of and take care of it! Have Fun!");
 
-            pet.PetName();
-            pet.PetSpecies();
+            //pet.PetName();
+            //pet.PetSpecies();
+
 
             Console.Clear();
 
@@ -44,6 +46,14 @@ namespace VirtualPetsAmokDotNet
                 }
 
                 string playerSelection = Console.ReadLine().ToLower();
+                if (playerSelection == "add")
+                {
+                    pet = new VirtualPet();
+                    pet.PetName();
+                    pet.PetSpecies();
+                    shelter.AddPetToShelter(pet);
+                }
+                    
                 if (playerSelection == "petsinfo")
                 {
                     pet.PetInfo();
