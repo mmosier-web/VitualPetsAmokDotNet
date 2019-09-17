@@ -7,6 +7,8 @@ namespace VirtualPetsAmokDotNet
     {
         static void Main(string[] args)
         {
+            RoboticPet Robotic = new RoboticPet();
+            OrganicPet Organic = new OrganicPet();
             VirtualPet pet = new VirtualPet();
             VirtualPetShelter shelter = new VirtualPetShelter();
             Console.WriteLine("Would you like to start the Game? (Y / N)");
@@ -81,7 +83,7 @@ namespace VirtualPetsAmokDotNet
                 }
                 else if (playerSelection == "doctor")
                 {
-                    pet.Doctor();
+                    Organic.DoctorOrganic();
                     Console.WriteLine("Press Enter");
                     Console.ReadKey();
                 }

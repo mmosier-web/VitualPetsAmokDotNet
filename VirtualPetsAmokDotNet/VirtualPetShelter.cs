@@ -6,47 +6,47 @@ namespace VirtualPetsAmokDotNet
 {
     class VirtualPetShelter
     {
-        List<VirtualPet> shelter = new List<VirtualPet>();
+        List<OrganicPet> shelter = new List<OrganicPet>();
 
         public VirtualPetShelter()
         {
 
         }
-        public void AddPetToShelter(VirtualPet pet)
+        public void AddPetToShelter(OrganicPet pet)
         {
             shelter.Add(pet);
         }
         public void ShowAllInfo()
         {
-            foreach(VirtualPet pet in shelter)
+            foreach(OrganicPet pet in shelter)
             {
                 pet.PetInfo();
             }
         }
         public void ShowAllStatus()
         {
-            foreach(VirtualPet pet in shelter)
+            foreach(OrganicPet pet in shelter)
             {
                 pet.PetStatus();
             }
         }
         public void FeedAllPets()
         {
-            foreach (VirtualPet pet in shelter)
+            foreach (OrganicPet pet in shelter)
             {
                 pet.Feed();
             }
         }
         public void PlayAll()
         {
-            foreach (VirtualPet pet in shelter)
+            foreach (OrganicPet pet in shelter)
             {
                 pet.Play();
             }
         }
         public void TakeAllToDoctor()
         {
-            foreach (VirtualPet pet in shelter)
+            foreach (OrganicPet pet in shelter)
             {
                 pet.Doctor();
             }
