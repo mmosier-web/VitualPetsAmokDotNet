@@ -21,7 +21,7 @@ namespace VirtualPetsAmokDotNet
             Console.WriteLine("Create a pet: Press 1");
             Console.WriteLine("View pet info: Press 2");
             Console.WriteLine("View pet status: Press 3");
-            Console.WriteLine("Feed pet: Press 4");
+            Console.WriteLine("Feed/oil pet: Press 4");
             Console.WriteLine("Play with pet: Press 5");
             Console.WriteLine("Take pet for doctor visit: Press 6");
             Console.WriteLine("End Game: Press 7");
@@ -37,13 +37,13 @@ namespace VirtualPetsAmokDotNet
             else if (playerSelection == "2")
             {
                 //pet.PetInfo();
-                OrganicPet.PetInfo();
+                shelter.ShowAllInfo();
                 Console.WriteLine("Press Enter");
                 Console.ReadKey();
             }
             else if (playerSelection == "3")
             {
-                OrganicPet.PetStatus();
+                shelter.ShowAllStatus();
                 Console.WriteLine("Press Enter");
                 Console.ReadKey();
             }

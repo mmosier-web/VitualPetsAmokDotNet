@@ -12,11 +12,7 @@ namespace VirtualPetsAmokDotNet
         {
 
         }
-        public void AddPetToShelter(OrganicPet pet)
-        {
-            shelter.Add(pet);
-        }
-        public void AddPetToShelter(RoboticPet pet)
+        public void AddPetToShelter(VirtualPet pet)
         {
             shelter.Add(pet);
         }
