@@ -6,7 +6,7 @@ namespace VirtualPetsAmokDotNet
 {
     class VirtualPetShelter
     {
-        List<OrganicPet> shelter = new List<OrganicPet>();
+        List<VirtualPet> shelter = new List<VirtualPet>();
 
         public VirtualPetShelter()
         {
@@ -16,9 +16,13 @@ namespace VirtualPetsAmokDotNet
         {
             shelter.Add(pet);
         }
+        public void AddPetToShelter(RoboticPet pet)
+        {
+            shelter.Add(pet);
+        }
         public void ShowAllInfo()
         {
-            foreach(OrganicPet pet in shelter)
+            foreach(VirtualPet pet in shelter)
             {
                 pet.PetInfo();
             }
@@ -32,21 +36,21 @@ namespace VirtualPetsAmokDotNet
         }
         public void FeedAllPets()
         {
-            foreach (OrganicPet pet in shelter)
+            foreach (VirtualPet pet in shelter)
             {
                 pet.Feed();
             }
         }
         public void PlayAll()
         {
-            foreach (OrganicPet pet in shelter)
+            foreach (VirtualPet pet in shelter)
             {
                 pet.Play();
             }
         }
         public void TakeAllToDoctor()
         {
-            foreach (OrganicPet pet in shelter)
+            foreach (VirtualPet pet in shelter)
             {
                 pet.Doctor();
             }

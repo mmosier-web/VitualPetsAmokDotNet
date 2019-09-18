@@ -10,12 +10,11 @@ namespace VirtualPetsAmokDotNet
         public int PetSocial { get; set; }
         public int Health { get; set; }
 
-        public OrganicPet()
+        public void Pet()
         {
             Fullness = 10;
             PetSocial = 10;
             Health = 10;
-            return 0;
         }
 
         public override void PetStatus()
@@ -25,7 +24,7 @@ namespace VirtualPetsAmokDotNet
             Console.WriteLine("Pet Fullness = " + Fullness + " Social = " + PetSocial + " Health = " + Health);
         }
 
-        public void FeedOrganic()
+        public override void Feed()
         {
             Console.WriteLine("You have fed your pet!");
             Fullness += 2;
@@ -37,7 +36,7 @@ namespace VirtualPetsAmokDotNet
                 Health--;
             }
         }
-        public void PlayOrganic()
+        public override void Play()
         {
             if (Health == 3)
             {
@@ -80,7 +79,7 @@ namespace VirtualPetsAmokDotNet
 
             }
         }
-        public void DoctorOrganic()
+        public override void Doctor()
         {
             Console.WriteLine("You took your pet to the doctor!");
             Health++;
@@ -94,18 +93,18 @@ namespace VirtualPetsAmokDotNet
             }
             
         }
-        public void PetNameOrganic()
+        public override void PetName()
         {
             Console.WriteLine("What is its Name: ");
             Name = Console.ReadLine();
         }
-        public void PetSpeciesOrganic()
+        public override void PetSpecies()
         {
             Console.WriteLine("What species is it: ");
             Species = Console.ReadLine();
         }
 
-        public void PetInfoOrganic()
+        public override void PetInfo()
         {
             Console.WriteLine("Your pets name is :" + " " + Name);
             Console.WriteLine("Your pets species is :" + " " + Species);

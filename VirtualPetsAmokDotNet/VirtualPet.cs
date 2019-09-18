@@ -6,32 +6,41 @@ namespace VirtualPetsAmokDotNet
 {
     public class VirtualPet
     {
-        
+
         public string Name { get; set; }
         public string Species { get; set; }
 
-        public void PetName()
+        public virtual void PetName()
         {
-            Console.WriteLine("What is its Name: ");
-            Name = Console.ReadLine();
+
         }
-        public void PetSpecies()
+        public virtual void PetSpecies()
         {
-            Console.WriteLine("What species is it: ");
-            Species = Console.ReadLine();
+
         }
 
-        public void PetInfo()
+        public virtual void PetInfo()
         {
-            Console.WriteLine("Your pets name is :" + " " + Name);
-            Console.WriteLine("Your pets species is :" + " " + Species);
-        }
 
-        
-       public virtual void PetStatus()
+        }
+        public virtual void PetStatus()
         {
-            
-        }
-    }   
 
+        }
+        public virtual void Play()
+        {
+
+        }
+        public virtual void Feed()
+        {
+
+        }
+        public virtual void Health() 
+        {
+
+        }
+        public virtual void Doctor()
+        {
+    }
+        } 
 }
