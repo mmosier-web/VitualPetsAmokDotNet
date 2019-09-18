@@ -10,68 +10,66 @@ namespace VirtualPetsAmokDotNet
         public int PetSocialRobotic { get; set; }
         public int Maintenance { get; set; }
 
-        public void PetNameOrganic()
-        {
-            Console.WriteLine("What is its Name: ");
-            Name = Console.ReadLine();
-            void PetSpeciesOrganic()
-            {
-                Console.WriteLine("What species is it: ");
-                Species = Console.ReadLine();
-            }
-
-        }
-        public void PetInfoOrganic()
-        {
-            Console.WriteLine("Your pets name is :" + " " + Name);
-            Console.WriteLine("Your pets species is :" + " " + Species);
-        }
-
         public RoboticPet()
         {
-            OilLevels = 10;
+            OilLevel = 10;
             PetSocialRobotic = 10;
             Maintenance = 10;
 
         }
 
-        public void PetStatusRobotic()
+        public override void PetName()
+        {
+            Console.WriteLine("What is its Name: ");
+            Name = Console.ReadLine();
+        }
+      public override void PetSpecies()
+        {
+            Console.WriteLine("What species is it: ");
+            Species = Console.ReadLine();
+        }
+        public override void PetInfo()
+        {
+            Console.WriteLine("Your pets name is :" + " " + Name);
+            Console.WriteLine("Your pets species is :" + " " + Species);
+        }
+        
+        public override void PetStatus()
         {
             Console.WriteLine(Name + " " + Species);
             Console.WriteLine("Hunger (Dont let the number reach 0 or less or you pet will lose health) social (If you pet gets to lonely it will lose health) Health (If health = 0 your pet will die so mke sure to go to the doctor)");
-            Console.WriteLine("Pet Fullness = " + Fullness + " Social = " + PetSocial + " Health = " + Health);
+            Console.WriteLine("Pet oilLevel = " + OilLevel + " Social = " + PetSocialRobotic + " Maintenance = " + Maintenance);
         }
-
-        public void FeedOrganic()
+        public override void Feed()
         {
-            Console.WriteLine("You have fed your pet!");
-            Fullness += 2;
+            Console.WriteLine("You have oiled your pet!");
+            OilLevel += 2;
 
-            PetSocial--;
-            if (Fullness <= 0)
+            PetSocialRobotic--;
+            if (OilLevel <= 0)
             {
-                Console.WriteLine("Your pet is to low on food and is losing health!");
-                Health--;
+                Console.WriteLine("Your pet is to low on oil and will need maintenance!");
+                Maintenance--;
             }
         }
-        public void PlayOrganic()
+        public override void Play()
         {
-            if (Health == 3)
+            if (Maintenance == 3)
             {
-                Console.WriteLine("You must go to doctor before playing with you pet because it's health is to low!");
-                if (Fullness <= 0)
+                Console.WriteLine("You must oil before playing with you pet because it needs oil");
+                if (OilLevel <= 0)
                 {
-                    Console.WriteLine("Your pet is to low on food and is losing health!");
-                    Health--;
+                    Console.WriteLine("Your pet is to low on oil and it needs maintenance!");
+                    Maintenance--;
                 }
 
             }
             else
             {
                 Console.WriteLine("You played with your pet");
-                PetSocial++;
-                Fullness--;
-                Fullness--;
+                PetSocialRobotic++;
+                OilLevel--;
+                OilLevel--;
                 Random rnd = new Random();
                 int HealthDown = rnd.Next(1, 6);
                 switch (HealthDown)
@@ -81,7 +79,7 @@ namespace VirtualPetsAmokDotNet
                     case 2:
                         break;
                     case 3:
-                        Health--;
+                        Maintenance--;
                         Console.WriteLine("Your pet got hurt while playing!");
                         break;
                     case 4:
@@ -89,29 +87,26 @@ namespace VirtualPetsAmokDotNet
                     case 5:
                         break;
                 }
-                if (Fullness <= 0)
+                if (OilLevel <= 0)
                 {
-                    Console.WriteLine("Your pet is to low on food and is losing health!");
-                    Health--;
+                    Console.WriteLine("Your pet is to low on oil and needs maintenance!");
+                    Maintenance--;
                 }
 
             }
         }
-        public void DoctorOrganic()
+        public override void Doctor()
         {
-            Console.WriteLine("You took your pet to the doctor!");
-            Health++;
-            Health++;
-            Fullness--;
-            PetSocial--;
-            if (Fullness <= 0)
+            Console.WriteLine("You took your pet to the mechanic!");
+            Maintenance++;
+            Maintenance++;
+            OilLevel--;
+            PetSocialRobotic--;
+            if (OilLevel <= 0)
             {
-                Console.WriteLine("Your pet is to low on food and is losing health!");
-                Health--;
+                Console.WriteLine("Your pet is to low on oil and needs oiled");
+                OilLevel--;
             }
-
         }
-        
-
     }
 }
