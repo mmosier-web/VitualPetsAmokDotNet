@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VirtualPetsAmokDotNet
 {
-    class OrganicPet : VirtualPet
+    public class OrganicPet : VirtualPet
     {
         public int Fullness { get; set; }
         public int PetSocial { get; set; }
@@ -15,10 +15,10 @@ namespace VirtualPetsAmokDotNet
             Fullness = 10;
             PetSocial = 10;
             Health = 10;
-
+            return 0;
         }
 
-        public void PetStatusOrganic()
+        public override void PetStatus()
         {
             Console.WriteLine(Name + " " + Species);
             Console.WriteLine("Hunger (Dont let the number reach 0 or less or you pet will lose health) social (If you pet gets to lonely it will lose health) Health (If health = 0 your pet will die so mke sure to go to the doctor)");

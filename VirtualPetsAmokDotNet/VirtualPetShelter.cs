@@ -25,7 +25,7 @@ namespace VirtualPetsAmokDotNet
         }
         public void ShowAllStatus()
         {
-            foreach(OrganicPet pet in shelter)
+            foreach(VirtualPet pet in shelter)
             {
                 pet.PetStatus();
             }

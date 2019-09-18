@@ -26,5 +26,12 @@ namespace VirtualPetsAmokDotNet
             Console.WriteLine("Your pets name is :" + " " + Name);
             Console.WriteLine("Your pets species is :" + " " + Species);
         }
-    }
+
+        
+       public virtual void PetStatus()
+        {
+            
+        }
+    }   
+
 }
