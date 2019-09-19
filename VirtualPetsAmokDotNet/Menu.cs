@@ -7,7 +7,6 @@ namespace VirtualPetsAmokDotNet
     class Menu
     {
         VirtualPetShelter shelter = new VirtualPetShelter();
-
         public Menu() 
         {
            
@@ -26,7 +25,8 @@ namespace VirtualPetsAmokDotNet
             Console.WriteLine("Feed/oil pet: Press 4");
             Console.WriteLine("Play with pet: Press 5");
             Console.WriteLine("Take pet for doctor/mechanic visit: Press 6");
-            Console.WriteLine("End Game: Press 7");
+            Console.WriteLine("To have a pet be adopted: press 7");
+            Console.WriteLine("End Game: Press 8");
 
             string playerSelection = Console.ReadLine().ToLower();
             if (playerSelection == "1")
@@ -65,23 +65,60 @@ namespace VirtualPetsAmokDotNet
             }
             else if (playerSelection == "4")
             {
-                pet.Feed();
-                Console.WriteLine("Press Enter");
-                Console.ReadKey();
+                Console.WriteLine("If you want to feed/oil all pets press: 1");
+                Console.WriteLine("If you want to feed one pet press: 2");
+                string FeedAllOr1 = Console.ReadLine();
+                if (FeedAllOr1 == "1")
+                {
+                    shelter.FeedAllPets();
+                }
+                else if (FeedAllOr1 == "2")
+                {
+                    shelter.ShowAllInfo();
+                    shelter.FeedSinglePet();
+
+
+                }
+                //pet.Feed();
+                //Console.WriteLine("Press Enter");
+                //Console.ReadKey();
             }
             else if (playerSelection == "5")
             {
-                pet.Play();
-                Console.WriteLine("Press Enter");
-                Console.ReadKey();
+                Console.WriteLine("If you want to play all pets press: 1");
+                Console.WriteLine("If you want to play with one pet press: 2");
+                string PlayAllOr1 = Console.ReadLine();
+                if (PlayAllOr1 == "1")
+                {
+                    shelter.FeedAllPets();
+                }
+                else if (PlayAllOr1 == "2")
+                {
+                    shelter.ShowAllInfo();
+                    shelter.playSinglePet();
+                }
             }
             else if (playerSelection == "6")
             {
-                pet.Doctor();
-                Console.WriteLine("Press Enter");
-                Console.ReadKey();
+                Console.WriteLine("If you want to take all pets to doctor/mechanic press: 1");
+                Console.WriteLine("If you want to take one pet to doctor/mechanic press: 2");
+                string DMAllOr1 = Console.ReadLine();
+                if (DMAllOr1 == "1")
+                {
+                    shelter.FeedAllPets();
+                }
+                else if (DMAllOr1 == "2")
+                {
+                    shelter.ShowAllInfo();
+                    shelter.DMSinglePet();
+                }
             }
             else if (playerSelection == "7")
+            {
+                shelter.ShowAllInfo();
+                shelter.AdoptedPet();
+            }
+            else if (playerSelection == "8")
             {
                 Environment.Exit(0);
             }

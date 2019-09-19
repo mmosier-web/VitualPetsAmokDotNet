@@ -9,6 +9,7 @@ namespace VirtualPetsAmokDotNet
 
         public string Name { get; set; }
         public string Species { get; set; }
+        public int ID { get; set; }
 
         public virtual void PetName()
         {

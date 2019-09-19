@@ -15,7 +15,6 @@ namespace VirtualPetsAmokDotNet
             OilLevel = 10;
             PetSocialRobotic = 10;
             Maintenance = 10;
-
         }
 
         public override void PetName()
@@ -30,6 +29,7 @@ namespace VirtualPetsAmokDotNet
         }
         public override void PetInfo()
         {
+            Console.WriteLine("Robotic");
             Console.WriteLine("Your pets name is :" + " " + Name);
             Console.WriteLine("Your pets species is :" + " " + Species);
         }

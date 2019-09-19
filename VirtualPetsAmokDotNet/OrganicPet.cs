@@ -10,7 +10,7 @@ namespace VirtualPetsAmokDotNet
         public int PetSocial { get; set; }
         public int Health { get; set; }
 
-        public void Pet()
+        public OrganicPet()
         {
             Fullness = 10;
             PetSocial = 10;
@@ -106,6 +106,7 @@ namespace VirtualPetsAmokDotNet
 
         public override void PetInfo()
         {
+            Console.WriteLine("Organic");
             Console.WriteLine("Your pets name is :" + " " + Name);
             Console.WriteLine("Your pets species is :" + " " + Species);
         }
