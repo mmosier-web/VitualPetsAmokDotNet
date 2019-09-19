@@ -7,10 +7,11 @@ namespace VirtualPetsAmokDotNet
     {
         static void Main(string[] args)
         {
-            RoboticPet Robotic = new RoboticPet();
-            OrganicPet Organic = new OrganicPet();
-            VirtualPet pet = new VirtualPet();
-            VirtualPetShelter shelter = new VirtualPetShelter();
+            //RoboticPet Robotic = new RoboticPet();
+            //OrganicPet Organic = new OrganicPet();
+            Menu Menu = new Menu();
+            //VirtualPet pet = new VirtualPet();
+            //VirtualPetShelter shelter = new VirtualPetShelter();
             Console.WriteLine("Would you like to start the Game? (Y / N)");
             string Player = Console.ReadLine().ToLower();
 
@@ -35,10 +36,10 @@ namespace VirtualPetsAmokDotNet
 
             Console.Clear();
 
-            bool mainMenu = true;
-            while (mainMenu)
+            bool mainMenuLoop = true;
+            while (mainMenuLoop)
             {
-               
+                Menu.MainMenu();
             }
         }
     }

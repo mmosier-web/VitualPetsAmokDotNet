@@ -21,7 +21,7 @@ namespace VirtualPetsAmokDotNet
 
         public virtual void PetInfo()
         {
-
+            
         }
         public virtual void PetStatus()
         {
@@ -35,12 +35,9 @@ namespace VirtualPetsAmokDotNet
         {
 
         }
-        public virtual void Health() 
+        public virtual void Doctor()
         {
 
         }
-        public virtual void Doctor()
-        {
     }
-        } 
 }

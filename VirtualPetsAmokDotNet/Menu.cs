@@ -6,15 +6,17 @@ namespace VirtualPetsAmokDotNet
 {
     class Menu
     {
+        VirtualPetShelter shelter = new VirtualPetShelter();
+
         public Menu() 
         {
            
         }
 
-        public void MenuOrganic() 
-           {
-            VirtualPetShelter shelter = new VirtualPetShelter();
-            OrganicPet OrganicPet = new OrganicPet();
+        public void MainMenu() 
+        {
+            VirtualPet pet = new VirtualPet();
+
             Console.Clear();
             Console.WriteLine("MAIN MENU");
             Console.WriteLine(" ");
@@ -23,16 +25,30 @@ namespace VirtualPetsAmokDotNet
             Console.WriteLine("View pet status: Press 3");
             Console.WriteLine("Feed/oil pet: Press 4");
             Console.WriteLine("Play with pet: Press 5");
-            Console.WriteLine("Take pet for doctor visit: Press 6");
+            Console.WriteLine("Take pet for doctor/mechanic visit: Press 6");
             Console.WriteLine("End Game: Press 7");
 
             string playerSelection = Console.ReadLine().ToLower();
             if (playerSelection == "1")
             {
-                OrganicPet = new OrganicPet();
-                OrganicPet.PetName();
-                OrganicPet.PetSpecies();
-                shelter.AddPetToShelter(OrganicPet);
+                Console.WriteLine("If you want to make an organic pet: press 1");
+                Console.WriteLine("If you want to make an robotic pet: press 2");
+                string OrganicOrRobotic = Console.ReadLine();
+                if (OrganicOrRobotic == "1")
+                {
+                    pet = new OrganicPet();
+                    pet.PetName();
+                    pet.PetSpecies();
+                    shelter.AddPetToShelter(pet);
+                }
+                else if (OrganicOrRobotic == "2")
+                {
+                    pet = new RoboticPet();
+                    pet.PetName();
+                    pet.PetSpecies();
+                    shelter.AddPetToShelter(pet);
+                }
+
             }
             else if (playerSelection == "2")
             {
@@ -49,19 +65,19 @@ namespace VirtualPetsAmokDotNet
             }
             else if (playerSelection == "4")
             {
-                OrganicPet.Feed();
+                pet.Feed();
                 Console.WriteLine("Press Enter");
                 Console.ReadKey();
             }
             else if (playerSelection == "5")
             {
-                OrganicPet.Play();
+                pet.Play();
                 Console.WriteLine("Press Enter");
                 Console.ReadKey();
             }
             else if (playerSelection == "6")
             {
-                OrganicPet.Doctor();
+                pet.Doctor();
                 Console.WriteLine("Press Enter");
                 Console.ReadKey();
             }
