@@ -7,8 +7,11 @@ namespace VirtualPetsAmokDotNet
     {
         static void Main(string[] args)
         {
-            VirtualPet pet = new VirtualPet();
-            VirtualPetShelter shelter = new VirtualPetShelter();
+            //RoboticPet Robotic = new RoboticPet();
+            //OrganicPet Organic = new OrganicPet();
+            Menu Menu = new Menu();
+            //VirtualPet pet = new VirtualPet();
+            //VirtualPetShelter shelter = new VirtualPetShelter();
             Console.WriteLine("Would you like to start the Game? (Y / N)");
             string Player = Console.ReadLine().ToLower();
 
@@ -33,88 +36,10 @@ namespace VirtualPetsAmokDotNet
 
             Console.Clear();
 
-            bool mainMenu = true;
-            while (mainMenu)
+            bool mainMenuLoop = true;
+            while (mainMenuLoop)
             {
-                pet.MainMenu();
-                if (pet.Health == 0)
-                {
-                    Console.WriteLine("You have let your pet's health get too low and it has died");
-                    Console.WriteLine("Game Over");
-                    Environment.Exit(0);
-                    Console.ReadKey();
-                }
-
-                string playerSelection = Console.ReadLine().ToLower();
-                if (playerSelection == "add")
-                {
-                    pet = new VirtualPet();
-                    pet.PetName();
-                    pet.PetSpecies();
-                    shelter.AddPetToShelter(pet);
-                }
-
-                else if (playerSelection == "petsinfo")
-                {
-                    //pet.PetInfo();
-                    shelter.ShowAllInfo();
-                    Console.WriteLine("Press Enter");
-                    Console.ReadKey();
-                }
-                else if (playerSelection == "ps")
-                {
-                    pet.PetStatus();
-                    Console.WriteLine("Press Enter");
-                    Console.ReadKey();
-                }
-                else if (playerSelection == "feed")
-                {
-                    pet.Feed();
-                    Console.WriteLine("Press Enter");
-                    Console.ReadKey();
-                }
-                else if (playerSelection == "play")
-                {
-                    pet.Play();
-                    Console.WriteLine("Press Enter");
-                    Console.ReadKey();
-                }
-                else if (playerSelection == "doctor")
-                {
-                    pet.Doctor();
-                    Console.WriteLine("Press Enter");
-                    Console.ReadKey();
-                }
-                else if (playerSelection == "allstatus")
-                {
-                    shelter.ShowAllStatus();
-                    Console.WriteLine("Press Enter");
-                    Console.ReadKey();
-                }
-                else if (playerSelection == "feedall")
-                {
-                    shelter.FeedAllPets();
-                    Console.WriteLine("Press Enter");
-                    Console.ReadKey();
-                }
-                else if (playerSelection== "playall")
-                {
-                    shelter.PlayAll();
-                    Console.WriteLine("Press Enter");
-                    Console.ReadKey();
-                }
-                else if (playerSelection == "doctorall")
-                {
-                    shelter.TakeAllToDoctor();
-                    Console.WriteLine("Press Enter");
-                    Console.ReadKey();
-                }
-                else if (playerSelection == "exit") 
-                {
-                    Environment.Exit(0);
-
-                }
-                
+                Menu.MainMenu();
             }
         }
     }
